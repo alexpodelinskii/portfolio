@@ -19,8 +19,15 @@ export const Work = (props: WorkPropsType) => {
     );
 };
 const StyledWork = styled.div`
-    background-color: #6c1818;`
-const Image = styled.img``
+    background-color: #6c1818;
+    max-width: 560px;
+    object-fit: cover;
+`
+
+const Image = styled.img`
+    width: 100%;
+    height: 260px;
+`
 const Title = styled.h3``
 const Text = styled.p``
 const Link = styled.a``

@@ -12,7 +12,7 @@ export const Works = () => {
         <StyledWorks>
             <SectionTitle>My Works</SectionTitle>
             <Menu menuItems={worksMenuItems}/>
-            <FlexWrapper>
+            <FlexWrapper justify={'space-around'}>
                 <Work imgSrc={workImage} title={'Social Network'}
                       text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}
                       demoSrc={'#'} codeSrc={'#'}/>
