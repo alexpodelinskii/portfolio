@@ -22,7 +22,7 @@ export const Works = () => {
                 );
                 };
 
-const StyledWorks = styled.div`
+const StyledWorks = styled.section`
     min-height: 100vh;
     background-color: indianred;
 `
