@@ -13,17 +13,30 @@ export const GlobalStyled = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html, body {
+        height: 100%;
+        width: 100%;
+        font-size: 100%;
+        line-height: 1;
+        font-size: 14px;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        color: ${theme.colors.fontsColor};
+    }
+
     li {
         list-style: none;
     }
 
     a,
-    a:visited {
+    a:visited,
+    a:hover {
         text-decoration: none;
     }
 
-    a:hover {
-        text-decoration: none;
+    a {
+        color: ${theme.colors.fontsColor};
     }
 
     h1,
@@ -52,17 +65,6 @@ export const GlobalStyled = createGlobalStyle`
         display: block;
     }
 
-    html, body {
-        height: 100%;
-        width: 100%;
-        font-size: 100%;
-        line-height: 1;
-        font-size: 14px;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%;
-        -moz-text-size-adjust: 100%;
-        color: ${        theme.colors.fontsColor    };
-    }
 
     input, button, textarea {
         font-family: inherit;
@@ -74,6 +76,8 @@ export const GlobalStyled = createGlobalStyle`
 
     button {
         cursor: pointer;
+        background-color: inherit;
+        color: ${theme.colors.fontsColor};
     }
 
     button::-moz-focus-inner {
@@ -92,7 +96,12 @@ export const GlobalStyled = createGlobalStyle`
         line-height: 1.2;
     }
 
+    section {
+        padding: 100px 0;
+    }
+
     section:nth-of-type(odd) {
+
         background-color: ${theme.colors.primaryBg};
     }
 
@@ -100,5 +109,16 @@ export const GlobalStyled = createGlobalStyle`
         background-color: ${theme.colors.secondaryBg};
     }
 
+    h3 {
+        font-family: Josefin Sans, sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 1px
+    }
 
+    p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.4;
+    }
 `
