@@ -36,6 +36,7 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     a {
+        cursor: pointer;
         color: ${theme.colors.fontsColor};
     }
 
