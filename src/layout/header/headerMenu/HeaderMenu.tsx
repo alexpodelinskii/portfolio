@@ -31,6 +31,9 @@ const StyledHeaderMenu = styled.nav`
         display: flex;
         gap: 30px;
     }
+    @media ${theme.media.tablet} {
+        display: none;
+}
 `
 const MenuList = styled.ul``
 
