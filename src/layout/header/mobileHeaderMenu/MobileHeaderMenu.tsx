@@ -4,10 +4,10 @@ import {theme} from "../../../styles/Theme.ts";
 export const MobileHeaderMenu = (props: { menuItems: Array<string> }) => {
     return (
         <StyledMobileHeaderMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                 <span></span>
             </BurgerButton>
-            <MenuList isOpen={true}>
+            <MenuList isOpen={false}>
                 {
                     props.menuItems.map((el, index) => {
                         return <MenuItem key={index}>
