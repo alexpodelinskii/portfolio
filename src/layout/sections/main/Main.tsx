@@ -54,7 +54,7 @@ const Name = styled.h2`
             height: 20px;
             width: 100%;
             position: absolute;
-            bottom: 0px;
+            bottom: 0;
             left: 0;
             background-color: ${theme.colors.fontColorAccent};
             z-index: -1;
