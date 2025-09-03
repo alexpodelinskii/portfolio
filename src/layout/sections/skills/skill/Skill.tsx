@@ -26,7 +26,7 @@ export const Skill = (props: SkillPropsType) => {
 
 const StyledSkill = styled.div`
     width: 330px;
-    padding: 62px 20px 40px;
+    padding: 42px 20px 20px;
     flex-grow: 1;
     ${IconWrapper}{
         color: #7572D5;

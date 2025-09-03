@@ -9,7 +9,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align='center' justify={'space-around'} wrap={'wrap'}>
+                <FlexWrapper align='center' justify={'space-between'} wrap={'wrap'}>
                     <div>
                         <SmallText>Hi There</SmallText>
                         <Name>I am <span>Svetlana Dyablo</span></Name>
@@ -76,42 +76,44 @@ const Photo = styled.img`
     width: 350px;
     height: 430px;
     object-fit: cover;
-    margin-right: 41px;
+    
 
     @media ${theme.media.mobile} {
         width: 310px;
         height: 380px;
         margin-right: 35px;
+        margin-right: 41px;
     }
 
 `
 const PhotoWrapper = styled.div`
     position: relative;
     z-index: 2;
-    margin-top: 65px;
-    
+    margin-top: -5px;
+
     &::before {
         content: '';
         display: block;
-        width: 384px;
-        height: 470px;
+        width: 371px;
+        height: 479px;
         border: 5px solid ${theme.colors.fontColorAccent};
         position: absolute;
-        left: 24px;
-        top: -24px;
-        
+        left: 19px;
+        top: -27px;
+
         z-index: -1;
         @media ${theme.media.mobile} {
             width: 314px;
             height: 414px;
             top: -17px;
             left: 20px;
-            
-        }
-       
-            
         }
     }
+}
 
+@media ${theme.media.mobile} {
+  
+    margin-top: 65px;
+}
 
 `

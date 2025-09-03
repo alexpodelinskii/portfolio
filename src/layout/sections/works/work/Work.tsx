@@ -113,5 +113,5 @@ const Title = styled.h3`
 `
 const Text = styled.p`
     margin-top: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 `

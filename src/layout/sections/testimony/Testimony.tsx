@@ -25,11 +25,10 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
-    min-height: 100vh;
     background-color: #9fca68;
     
     ${IconWrapper}{
-        margin-top: 40px;
-        margin-bottom: 72px;
+        margin-top: 30px;
+        margin-bottom: 70px;
     }
 `

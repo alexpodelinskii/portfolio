@@ -22,7 +22,7 @@ const StyledTabMenu = styled.nav`
 `
 
 const MenuList = styled.ul`
-    margin: 0 auto 40px; 
+    margin: 0 auto 50px; 
     display: flex;
     justify-content: space-between;
     max-width: 352px;
