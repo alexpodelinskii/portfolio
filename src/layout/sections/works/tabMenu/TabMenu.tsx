@@ -22,10 +22,11 @@ const StyledTabMenu = styled.nav`
 `
 
 const MenuList = styled.ul`
+    margin: 0 auto 40px; 
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
+    justify-content: space-between;
+    max-width: 352px;
+    width: 100%;
 `
 const MenuItem = styled.li`
 `

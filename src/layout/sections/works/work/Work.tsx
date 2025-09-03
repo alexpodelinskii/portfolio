@@ -29,38 +29,39 @@ export const Work = (props: WorkPropsType) => {
 };
 const StyledWork = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    max-width: 560px;
-    object-fit: cover;
+
+    width: 330px;
+    flex-grow: 1;
 
     ${Link} {
         padding: 10px 0;
-        & + ${Link}{
+
+        & + ${Link} {
             margin-left: 20px;
         }
+    }
+
+    @media ${theme.media.desktop} {
+        max-width: 540px;
     }
 `
 
 const ImageWrapper = styled.div`
     position: relative;
 
-
-    &:hover {
-        &::before {
-            content: '';
-            display: inline-block;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            position: absolute;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(4px);
-        }
-        ${Button} {
-            z-index: 1;
-            opacity: 1;
-        }
+    &::before {
+        content: '';
+        display: inline-block;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+        opacity: 0;
     }
+
     ${Button} {
         position: absolute;
         top: 50%;
@@ -68,10 +69,34 @@ const ImageWrapper = styled.div`
         transform: translate(-50%, -50%);
         z-index: -100;
         opacity: 0;
-        &::before{
+
+        &::before {
             width: 100%;
             height: 100%;
             left: 0;
+        }
+    }
+
+    &:hover {
+        &::before {
+           opacity: 1;
+        }
+
+
+        ${Button} {
+            z-index: 1;
+            opacity: 1;
+        }
+    }
+    @media ${theme.media.tablet} {
+        &::before {
+            opacity: 1;
+        }
+
+
+        ${Button} {
+            z-index: 1;
+            opacity: 1;
         }
     }
 `
