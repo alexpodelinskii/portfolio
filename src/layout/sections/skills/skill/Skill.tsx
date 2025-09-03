@@ -28,6 +28,9 @@ const StyledSkill = styled.div`
     width: 330px;
     padding: 62px 20px 40px;
     flex-grow: 1;
+    ${IconWrapper}{
+        color: #7572D5;
+    }
     @media ${theme.media.mobile} {
         padding: 62px 0 40px;
     }
