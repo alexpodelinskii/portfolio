@@ -47,7 +47,7 @@ const Name = styled.h2`
         position: relative;
         z-index: 2;
         white-space: nowrap;
-        
+
         &::before {
             content: '';
             display: block;
@@ -59,17 +59,17 @@ const Name = styled.h2`
             background-color: ${theme.colors.fontColorAccent};
             z-index: -1;
         }
-@media ${theme.media.mobile} {
-    margin: 15px 0 22px;
-}
+
+        @media ${theme.media.mobile} {
+            margin: 15px 0 22px;
+        }
     }
 `
 const MainTitle = styled.h1`
     ${font({Fmax: 27, Fmin: 20, weight: 400})}
     text-align: left;
     
-        
-    }
+}
 `
 
 const Photo = styled.img`
@@ -77,12 +77,11 @@ const Photo = styled.img`
     height: 430px;
     object-fit: cover;
     margin-right: 41px;
-    
+
     @media ${theme.media.mobile} {
         width: 310px;
         height: 380px;
-
-
+        margin-right: 35px;
     }
 
 `
