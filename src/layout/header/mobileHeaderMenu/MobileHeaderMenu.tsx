@@ -1,13 +1,17 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
+import {useState} from "react";
 
 export const MobileHeaderMenu = (props: { menuItems: Array<string> }) => {
+    const [menuIsOpen, setMenuStatus
+    ] = useState(false)
+    const changeMenuStatus = () => setMenuStatus((!menuIsOpen));
     return (
         <StyledMobileHeaderMenu>
-            <BurgerButton isOpen={false}>
+            <BurgerButton isOpen={menuIsOpen} onClick={changeMenuStatus}>
                 <span></span>
             </BurgerButton>
-            <MenuList isOpen={false}>
+            <MenuList isOpen={menuIsOpen} onClick={changeMenuStatus}>
                 {
                     props.menuItems.map((el, index) => {
                         return <MenuItem key={index}>
@@ -35,42 +39,45 @@ const StyledMobileHeaderMenu = styled.nav`
     @media ${theme.media.tablet} {
         display: block;
     }
- 
+
 
 `
-const BurgerButton = styled.button<{isOpen:boolean}>`
+const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
     width: 200px;
     height: 200px;
     top: -100px;
     right: -100px;
     z-index: 11;
-    
-    span{
+
+    span {
         width: 36px;
         height: 2px;
         background-color: ${theme.colors.fontsColor};
         position: absolute;
         left: 40px;
         bottom: 50px;
+
         &::before,
-        &::after{
+        &::after {
             content: '';
             display: block;
             height: 2px;
             background-color: ${theme.colors.fontsColor};
             position: absolute;
-            
+
         }
-        &::before{
+
+        &::before {
             width: 36px;
             transform: translateY(-10px);
         }
-        
-        &::after{
+
+        &::after {
             width: 36px;
             transform: translateY(10px);
         }
+
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: rgba(255, 255, 255, 0);
 
@@ -83,11 +90,11 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
                 transform: translateY(0px) rotate(-45deg);
             }
         `}
-        
+
     }
-    
+
 `
-const MenuList = styled.ul<{isOpen:boolean}>`
+const MenuList = styled.ul<{ isOpen: boolean }>`
     position: fixed;
     top: 0;
     bottom: 0;
@@ -95,7 +102,7 @@ const MenuList = styled.ul<{isOpen:boolean}>`
     left: 0;
     z-index: 9;
     background-color: rgba(31, 31, 32, 0.9);
-    
+
     gap: 30px;
     justify-content: center;
     flex-direction: column;
@@ -103,7 +110,7 @@ const MenuList = styled.ul<{isOpen:boolean}>`
     display: none;
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;
-        
+
     `}
 
 
